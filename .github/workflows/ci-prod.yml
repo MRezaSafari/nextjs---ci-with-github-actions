@@ -19,4 +19,15 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test --if-present
+    - uses: actions/checkout@v3
+      name: Build Complete - Checkout Code
+
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      name: Build & push Docker image
+      with:
+        image: rsafari/mydemo
+        registry: docker.io
+        addTimestamp: true
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
     
