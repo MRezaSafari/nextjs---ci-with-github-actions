@@ -25,7 +25,7 @@ jobs:
     - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & push Docker image
       with:
-        image: rsafari/mydemo
+        image: mrsafari/mydemo
         registry: docker.io
         addTimestamp: true
         username: ${{ secrets.DOCKER_USERNAME }}

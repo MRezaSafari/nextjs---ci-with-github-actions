@@ -1,0 +1,3 @@
+[![Production CI](https://github.com/MRezaSafari/nextjs---ci-with-github-actions/actions/workflows/ci-prod.yml/badge.svg)](https://github.com/MRezaSafari/nextjs---ci-with-github-actions/actions/workflows/ci-prod.yml)
+
+[![Development CI](https://github.com/MRezaSafari/nextjs---ci-with-github-actions/actions/workflows/ci-dev.yml/badge.svg)](https://github.com/MRezaSafari/nextjs---ci-with-github-actions/actions/workflows/ci-dev.yml)
