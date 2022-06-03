@@ -32,9 +32,11 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
   lighthouse:
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - run: mkdir ${{ github.workspace }}/tmp/artifacts
     - name: Lighthouse
       uses: foo-software/lighthouse-check-action@master
       with:
