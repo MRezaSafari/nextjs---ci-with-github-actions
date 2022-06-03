@@ -36,24 +36,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - run: mkdir ${{ github.workspace }}/tmp/artifacts
     - name: Lighthouse
       uses: foo-software/lighthouse-check-action@master
       with:
-        outputDirectory: ${{ github.workspace }}/tmp/artifacts
-        urls: 'https://onesell-prod.vercel.app'
-    - name: Verify Lighthouse Check results
-      uses: foo-software/lighthouse-check-status-action@master
-      with:
-        lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
-        minAccessibilityScore: "60"
-        minBestPracticesScore: "85"
-        minPerformanceScore: "85"
-        minProgressiveWebAppScore: "10"
-        minSeoScore: "85"
-    - name: Upload artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: Lighthouse reports
-        path: ${{ github.workspace }}/tmp/artifacts
-  
+        urls: 'https://1sell.com'
+    
